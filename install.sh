@@ -26,7 +26,7 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS"
 
 echo "==> Compiling..."
-swiftc -O -framework SwiftUI -framework AppKit \
+swiftc -parse-as-library -O -framework SwiftUI -framework AppKit \
   "$TMP_DIR/BlueWineApp.swift" \
   -o "$APP/Contents/MacOS/BlueWine"
 
